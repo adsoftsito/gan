@@ -1,4 +1,4 @@
-# Lectura 0 :  [Google Colab] (https://www.adictosaltrabajo.com/2019/06/04/google-colab-python-y-machine-learning-en-la-nube/)
+# Lectura 0 :  [Google Colab](https://www.adictosaltrabajo.com/2019/06/04/google-colab-python-y-machine-learning-en-la-nube/)
 # Lectura 1 :  [Deep learning](http://personal.cimat.mx:8181/~mrivera/cursos/aprendizaje_profundo/backprop/DeepLearning_1de2.pdf)
 # Lectura 2:   [Deep learning](http://personal.cimat.mx:8181/~mrivera/cursos/aprendizaje_profundo/backprop/DeepLearning_2de2.pdf)
 # Lab 1: [Red neuronal desde cero](https://anderfernandez.com/blog/como-programar-una-red-neuronal-desde-0-en-python/)
