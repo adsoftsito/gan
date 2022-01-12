@@ -1,0 +1,141 @@
+Estimados profesores,
+
+Les agradezco nuevamente la asistencia a este Segundo día de curso, les comparto las grabaciones de zoom aquí:
+
+Tema: Machine Learning for Natural Compound Discovery (AH II.4.5.0.129)
+Hora de inicio de la reunión: 11 ene. 2022 08:06 a. m.
+
+Grabación de la reunión:
+https://itesm.zoom.us/rec/share/81N39I9alK6g4C8-C-dkDOa0k8vWtV3KhMs26WInum-pXG6WNUlPS2Eeh0rDrNAc.lJ-cnDiInTfIndkr
+
+Código de acceso para acceder: ZVRdh=q1
+
+Para resumir el día de hoy se dividió en dos partes: 
+1era Parte
+
+1)	Manejo y manipulación de datos utilizando Panda, el cual puede ser consultado aquí: 
+
+https://pandas.pydata.org/
+
+En sí nuestro ambiente de Cadi22 debe ya tenerlo instalado de no ser el caso sigan las siguientes instrucciones: 
+
+a)	Abran una terminal en mac debe estar como terminal, en Windows es posible utilizar el prompt de Windows de Anaconda
+
+Mac:
+Abrir terminal
+pwd      #mira que directorio te encuentras, normalmente estarás en el parent
+
+cd Desktop #Cambia de directorio a Desktop o Escritorio
+
+Crea una nueva carpeta en el escritorio que se llame cadi22
+
+ls #observa los contenidos de tu directorio debe estar vacio
+
+conda env list #lista los ambientes
+
+conda actívate cadi22
+jupyter notebook
+
+Ahora abriste una libreta de Python en Chrome utilizando el nuevo directorio, crea una libreta nueva y escribe el siguiente comando para instalar panda
+
+!conda install -c anaconda pandas –y
+
+Windows
+
+En windows abre un prompt de anaconda y escribe cd, esto te dará el directorio donde estarás trabajando. 
+
+Ahora cambia al escritorio con cd Desktop 
+
+conda actívate cadi22 
+jupyter notebook
+
+abre una nueva libreta de jupyter y también instala panda. 
+
+TRABAJAR CON PANDA
+Baja el archivo sample.csv en el directorio recién creado en el escritorio llamado cadi, el archivo esta adjunto a este correo. 
+Ahora comenzaremos a trabajar con panda escribiendo los siguientes comandos: 
+
+import pandas as pd #trabaja el programa panda llamandolo como pd
+x=pd.read_csv("sample.csv") # lee el archive sample
+x.head() #mira las primeras 15 hileras
+x.tail() #mira las últimas 15 hileras
+x.shape #mira las dimensiones de la matrix de tus datos: columnas x hileras
+x.columns #mira las columnas de tu archivo. 
+
+Consulta el archivo Pandas Day2- Jupyter Notebook para que consultes otras operaciones útilies para manipular datos. 
+
+
+2da Parte
+
+Ahora una vez familiarizados con Panda y todas las posibilidades de trabajar datos, ahora lo aplicaremos a bases más grandes de compuestos. Un sitio bueno para revisar es 
+
+ChEMBL
+https://www.ebi.ac.uk/chembl/g/#browse/activities/filter/target_chembl_id%3ACHEMBL4040%20AND%20standard_type%3A(%22Potency%22)
+
+Arriba al dar click te lleva a un listado de compuestos probados con la proteína erk2 una kinasa que se cree que puede servir en el tratamiento del cáncer. Bajar esta lista de la opción de seleccionar todo y descargar como csv utilizando la opción en la página. Guardar en el directorio cadi
+
+Otra base de compuestos comerciales es ZINC
+https://zinc.docking.org/
+
+En esa base existen compuestos comerciales. 
+
+Para este cadi adjunto erk2.csv a este correo para trabajar, abre una nueva libreta de Python y comienza con:
+
+1.	Analizar los datos. Primero vemos que existen datos de bioactividades que debemos separar, en este cadi consideramos dos compuestos “activos” e “inactivos”, los primeros de 10,000 nM y los segundos de 20,000 nM como valor estándar. Estos datos están en la columna “Standard Values”
+2.	Debemos tratar la matriz de datos para quedarnos con sólo de 3 a 4 columnas, el resto es información que no nos interesa. 
+3.	Crearemos dos subdata sets llamados "active" e "inactive" 
+4.	Identificaresmos los compuestos ahí adentro y los etiquetaremos
+5.	Con esto estamos creando un modelo para alimentar al “machine learning”
+
+x.colums  #is for creating the columns, molecule identifier, smiles, standard relation, stardard type, standard Units and Standard Values
+Mean # hay un compuesto que esta duplicado 12 veces que vamos a promediar los valores estándares. 
+
+Revisa la libreta de ERK2DATA…..pdf 
+
+Básicamente las ideas de arriba es lo que se esta ejecutando en esta libreta. Te invito a consultarla junto con la clase, subiré al Drive la sesión de la tarde para que puedas reforzar lo aprendido y puedas ver los problemas técnicos que pueden aparecer. También subiré las libretas de jupiter en formato . ipyn
+
+
+
+Saludos a todos,
+
+
+Aarón Hernández-Cid 
+Profesor
+EIC Bioingeniería Toluca
+Tecnológico de Monterrey
+ 
+Tel: +52 (722) 279 9990 ext. 2169
+Intercampus 80-865-2169
+aaron.hernandezcid@tec.mx
+ 
+El contenido de este mensaje de datos no se considera oferta, propuesta ni aceptación del Instituto Tecnológico y de Estudios Superiores de Monterrey. El contenido de este mensaje de datos es confidencial y se entiende dirigido y para uso exclusivo del destinatario, por lo que no podrá distribuirse y/o difundirse por ningún medio sin la previa autorización del Instituto Tecnológico y de Estudios Superiores de Monterrey. Si usted no es el destinatario, se prohíbe su utilización total o parcial para cualquier fin.
+The content of this data transmission is not considered as an offer, proposal or acceptance of Instituto Tecnológico y de Estudios Superiores de Monterrey. The content of this data transmission is confidential and it is intended to be delivered only to the addresses, therefore, it shall not be distributed and/or disclosed through any means without previous authorization of Instituto Tecnológico y de Estudios Superiores de Monterrey. If you are not the addressee you are forbidden to use it, either totally or partially, for any purpose.
+
+
+============================
+============================
+============================
+============================
+
+Olvide que también el Dr. Pankaj nos invita a revisar el video que tiene el mismo contenido visto aquí:
+
+https://uresearcher.com/project/build-machine-learning-bioactivity-predictor-python
+
+es gratis. 
+
+Saludos,
+
+
+Aarón Hernández-Cid 
+Profesor
+EIC Bioingeniería Toluca
+Tecnológico de Monterrey
+ 
+Tel: +52 (722) 279 9990 ext. 2169
+Intercampus 80-865-2169
+aaron.hernandezcid@tec.mx
+ 
+El contenido de este mensaje de datos no se considera oferta, propuesta ni aceptación del Instituto Tecnológico y de Estudios Superiores de Monterrey. El contenido de este mensaje de datos es confidencial y se entiende dirigido y para uso exclusivo del destinatario, por lo que no podrá distribuirse y/o difundirse por ningún medio sin la previa autorización del Instituto Tecnológico y de Estudios Superiores de Monterrey. Si usted no es el destinatario, se prohíbe su utilización total o parcial para cualquier fin.
+The content of this data transmission is not considered as an offer, proposal or acceptance of Instituto Tecnológico y de Estudios Superiores de Monterrey. The content of this data transmission is confidential and it is intended to be delivered only to the addresses, therefore, it shall not be distributed and/or disclosed through any means without previous authorization of Instituto Tecnológico y de Estudios Superiores de Monterrey. If you are not the addressee you are forbidden to use it, either totally or partially, for any purpose.
+ 
+
